@@ -2,11 +2,12 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from proto import calculator_pb2 as proto_dot_calculator__pb2
+from gRPC_service.proto import calculator_pb2 as proto_dot_calculator__pb2
 
 
 class AddStub(object):
     """Missing associated documentation comment in .proto file."""
+    pass
 
     def __init__(self, channel):
         """Constructor.
@@ -14,6 +15,7 @@ class AddStub(object):
         Args:
             channel: A grpc.Channel.
         """
+        pass
         self.Addition = channel.unary_unary(
                 '/Add/Addition',
                 request_serializer=proto_dot_calculator__pb2.RequestAdd.SerializeToString,
@@ -23,9 +25,10 @@ class AddStub(object):
 
 class AddServicer(object):
     """Missing associated documentation comment in .proto file."""
-
+    pass
     def Addition(self, request, context):
         """Missing associated documentation comment in .proto file."""
+        pass
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
